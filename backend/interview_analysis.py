@@ -16,14 +16,19 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 import nltk
+from dotenv import load_dotenv
 nltk.download('punkt_tab')
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 
 # Initialize Groq client
+# Load environment variables from .env file
+load_dotenv()
+
+# Initialize Groq client with API key from environment variable
 client = Groq(
-    api_key="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",
+    api_key=os.getenv("GROQ_API_KEY"),
 )
 
 
@@ -158,7 +163,7 @@ def get_frequent_words(text, top_n=10):
 
 # If you need to run any initialization code
 def init():
-    import nltk
+
     nltk.download('punkt')
     nltk.download('stopwords')
 

@@ -3,10 +3,15 @@ import docx
 from groq import Groq
 from utils import extract_text_from_pdf, extract_text_from_docx
 import json
+import os
+from dotenv import load_dotenv
 
-client = Groq(
-    api_key="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",
-)
+load_dotenv()
+
+api_key = os.getenv("GROQ_API_KEY")
+
+
+client = Groq(api_key=api_key)
 
 def analyze_resume(resume_file, job_description):
     if resume_file.filename.endswith('.pdf'):
