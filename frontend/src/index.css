@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Global Styles */
+body {
+  background-color: #f9fafb;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #1a202c;
+}

@@ -1,0 +1,8 @@
+Flask
+Flask-CORS
+PyPDF2
+python-docx
+SpeechRecognition
+groq
+python-dotenv
+speechrecognition
